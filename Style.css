@@ -1,0 +1,694 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:linear-gradient(
+to bottom,
+#fffdfb,
+#fff8f5,
+#fffdfb
+);
+    font-family: 'nunito', sans-serif;
+    text-align: center;
+    color: #5c4b51;
+    margin: 0;
+    overflow-x: hidden;
+position: relative;
+}
+
+section{
+
+padding:140px 35px;
+
+max-width:900px;
+
+margin:auto;
+
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+section:nth-child(1) { animation-delay: 0.2s; }
+section:nth-child(2) { animation-delay: 0.4s; }
+section:nth-child(3) { animation-delay: 0.6s; }
+section:nth-child(4) { animation-delay: 0.8s; }
+section:nth-child(5) { animation-delay: 1s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:56px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+}
+
+h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:40px;
+
+margin-bottom:25px;
+
+}
+
+button{
+
+background:white;
+
+border:none;
+
+border-radius:40px;
+
+padding:16px 36px;
+
+font-size:17px;
+
+font-family:'Nunito',sans-serif;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 14px 35px rgba(0,0,0,.15);
+
+}
+    .polaroid {
+    width: 220px;
+    max-width: 70vw;
+
+    border: 12px solid white;
+    border-bottom: 40px solid white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    transform: rotate(-2deg);
+
+    margin: 20px auto;
+
+    display: block;
+    }
+  .caption-box{
+
+    background:#fffdfb;
+
+    max-width:700px;
+
+    margin:25px auto 60px;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    border-left:6px solid #e8c7d3;
+
+    line-height:2;
+
+}
+.question-card {
+    background: rgba(255,255,255,0.7);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.hidden-letter {
+
+    display: none;
+
+    margin: 25px auto;
+
+    max-width: 600px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    line-height: 1.8;
+}.caption-box h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #5c4b51;
+
+    font-size: 24px;
+}
+
+.caption-box p {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+#countdown {
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    color: #8b6f79;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+#lockScreen{
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:#fff8f5;
+}
+
+#unlockBtn{
+
+    display:none;
+
+    margin-top:30px;
+
+    padding:16px 35px;
+
+    font-size:18px;
+
+    border-radius:40px;
+
+    animation:popUp 0.6s ease;
+}
+
+@keyframes popUp{
+
+0%{
+transform:scale(0);
+opacity:0;
+}
+
+80%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}#lockScreen{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:#fff8f5;
+
+text-align:center;
+
+}
+
+#unlockBtn{
+
+display:none;
+
+margin-top:30px;
+
+padding:16px 35px;
+
+border-radius:40px;
+
+font-size:18px;
+
+transition:0.3s;
+
+}
+
+#unlockBtn:hover{
+
+transform:scale(1.05);
+
+}
+/* ===========================
+   Fade Animation
+=========================== */
+
+.fade-out{
+    animation: fadeOut 0.8s forwards;
+}
+
+.fade-in{
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+#lockScreen{
+
+height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(to bottom,#fffdfb,#fff5ef);
+
+padding:30px;
+
+}
+
+#lockScreen h2{
+
+font-size:42px;
+
+font-family:Georgia,serif;
+
+margin:10px 0;
+
+color:#5d4b55;
+
+}
+
+.intro{
+
+max-width:420px;
+
+line-height:1.9;
+
+margin:25px 0;
+
+color:#7c6c72;
+
+font-size:18px;
+
+}
+
+#unlockBtn{
+
+padding:16px 40px;
+
+border:none;
+
+border-radius:40px;
+
+background:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+#unlockBtn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}#titlePage{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+min-height:100vh;
+
+font-family:Georgia,serif;
+
+background:#fffaf7;
+
+}#lockScreen h1{
+
+font-size:60px;
+
+margin-bottom:10px;
+
+animation:floatBook 3s infinite ease-in-out;
+
+}
+
+@keyframes floatBook{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0px);
+}
+}
+.flower{
+
+position:fixed;
+
+font-size:20px;
+
+opacity:.15;
+
+animation:floatFlower 12s linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes floatFlower{
+
+0%{
+transform:translateY(100vh) rotate(0deg);
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg);
+}
+
+}
+.divider{
+
+    text-align:center;
+
+    margin:80px 0;
+
+    color:#d8b4c4;
+
+    font-size:22px;
+
+    letter-spacing:4px;
+
+}
+.bookplate{
+
+    background:#fffdfb;
+
+    border:2px solid #e8d6dd;
+
+    border-radius:18px;
+
+    max-width:420px;
+
+    margin:40px auto;
+
+    padding:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.bookplate-title{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    color:#8b6d78;
+
+}
+#progressContainer{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:#f5e9ee;
+
+    z-index:9999;
+
+}
+
+#progressBar{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(to right,#f5b7c8,#d89db3);
+
+    transition:width .15s;
+
+}
+.petal{
+    position: fixed;
+    top: -30px;
+    left: 0;
+
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 9999;
+
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+
+    from {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    100%{
+        transform: translateY(calc(100vh + 60px)) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+.sticker-title{
+    width:90px;
+    position:absolute;
+    top:120px;
+    right:40px;
+}
+.sticker-title2{
+    width:90px;
+    position:absolute;
+    top:120px;
+    left:40px;
+}
+.sticker-popcorn{
+    width:70px;
+    float:right;
+    margin-top:-20px;
+}
+
+.sticker-coffee{
+    width:80px;
+    margin-left:15px;
+}
+
+.blossomBranch{
+
+    position:absolute;
+
+    top:-20px;
+
+    left:-20px;
+
+    width:110px;
+
+    transform:rotate(60deg);
+
+    opacity:0.95;
+
+    pointer-events:none;
+
+}
+
+#birthdayScreen{
+
+    position:fixed;
+    inset:0;
+
+    background:#fffaf6;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:99999;
+
+}
+
+#birthdayScreen h1{
+
+    font-size:90px;
+
+}
+
+#candle{
+
+    font-size:55px;
+
+    margin:20px;
+
+    transition:0.5s;
+
+}
+
+#birthdayScreen button{
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+#wishPopup{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+.wishBox{
+
+    width:320px;
+
+    background:#fffaf7;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.2);
+
+}
+
+.wishBox h2{
+
+    color:#c67aa4;
+
+    margin-bottom:15px;
+
+}
+
+.wishBox button{
+
+    margin-top:20px;
+
+    padding:12px 26px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+}
+#birthdayCake{
+
+    width:180px;
+
+    margin:25px 0;
+
+    transition:0.6s ease;
+
+}
